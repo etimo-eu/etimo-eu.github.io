@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #0d4bde;
+  --primary-hover: #1558f6;
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --text-grey: #737373;
+  --bg-base: #0a0a0a;
+  --bg-card: rgba(255, 255, 255, 0.03);
+  --bg-card-hover: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-glow: rgba(13, 75, 222, 0.3);
+  --border-radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+h1, h2, h3, h4, h5 {
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Glassmorphism Card Utilities */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glow);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--border-glow);
+}
+
+/* Button Utilities */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-hover);
+  color: #ffffff;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Minimal Placeholder Layout */
+.placeholder-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  text-align: center;
+}
+
+.placeholder-logo {
+  max-width: 250px;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.placeholder-name {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: var(--text-grey);
+}
+
+/* CV Layout */
+.cv-container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4rem 4%;
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 4rem;
+}
+
+@media (max-width: 900px) {
+  .cv-container {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+}
+
+/* CV Sidebar */
+.cv-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.cv-header-logo {
+  max-width: 200px;
+  margin-bottom: 1rem;
+}
+
+.cv-title {
+  color: var(--primary);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.sidebar-section h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-main);
+}
+
+.contact-item svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--text-grey);
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: var(--text-main);
+}
+
+/* CV Main Content */
+.cv-main {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10%;
+  height: 80%;
+  width: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-card {
+  padding: 2rem;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+.job-title {
+  font-size: 1.3rem;
+  color: #ffffff;
+}
+
+.job-company {
+  color: var(--primary);
+  font-weight: 500;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+}
+
+.job-date {
+  color: var(--text-grey);
+  font-size: 0.9rem;
+}
+
+.job-description {
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.job-bullets {
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+}
+
+.job-bullets li {
+  margin-bottom: 0.5rem;
+}
+
+.job-bullets li::marker {
+  color: var(--primary);
+}
+
+/* Summary text */
+.summary-text {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+.summary-text p {
+  margin-bottom: 1rem;
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(13, 75, 222, 0.1);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}

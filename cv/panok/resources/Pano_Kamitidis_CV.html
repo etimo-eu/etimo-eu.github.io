@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pano Kamitidis - Curriculum Vitae</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px;
+      background: #fff;
+    }
+    h1 { font-size: 28px; color: #0d4bde; margin-bottom: 5px; }
+    h2 { font-size: 18px; color: #555; margin-top: 0; font-weight: 500; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; }
+    h3 { font-size: 16px; color: #0d4bde; margin-bottom: 5px; }
+    .contact-info { display: flex; gap: 20px; font-size: 14px; color: #666; margin-bottom: 30px; flex-wrap: wrap; }
+    .contact-info div { display: flex; align-items: center; gap: 5px; }
+    .section-title { font-size: 18px; text-transform: uppercase; letter-spacing: 1px; color: #0d4bde; border-bottom: 1px solid #0d4bde; padding-bottom: 5px; margin-top: 30px; margin-bottom: 15px; }
+    .job { margin-bottom: 25px; }
+    .job-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; }
+    .job-title { font-weight: 600; font-size: 16px; }
+    .job-meta { font-size: 14px; color: #666; }
+    .job-desc { margin-bottom: 10px; font-size: 14.5px; }
+    .job-bullets { margin: 0; padding-left: 20px; font-size: 14px; }
+    .job-bullets li { margin-bottom: 5px; }
+    .skills-container { display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px; }
+    .skill-badge { background: #f0f4ff; color: #0d4bde; padding: 4px 10px; border-radius: 4px; font-weight: 500; }
+    @media print {
+      body { padding: 0; }
+      @page { margin: 1.5cm; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Pano Kamitidis</h1>
+  <h2>Java Architect, Developer & Consultant — Freelance</h2>
+  
+  <div class="contact-info">
+    <div>📍 Helchteren, Belgium</div>
+    <div>✉️ pano.k@etimo.eu</div>
+    <div>📞 +32 487 61 78 60</div>
+  </div>
+
+  <div style="font-size: 14.5px; margin-bottom: 30px;">
+    Experienced Java backend specialist with 11+ years of professional experience designing, building and maintaining enterprise applications across eHealth, banking & insurance, and telecom. Currently Application Architect at Smals (Belgian federal eGov ICT partner) since 2020. Multidisciplinary background — laboratory science before software — informs a systems-thinking, quality-first approach.
+  </div>
+
+  <div class="section-title">Core Competencies & Skills</div>
+  <div class="skills-container">
+    <span class="skill-badge">Software Architecture</span>
+    <span class="skill-badge">Microservices</span>
+    <span class="skill-badge">Cloud Architecture</span>
+    <span class="skill-badge">RESTful APIs</span>
+    <span class="skill-badge">Java (11+ yrs)</span>
+    <span class="skill-badge">Spring Framework</span>
+    <span class="skill-badge">PostgreSQL / SQL</span>
+    <span class="skill-badge">Docker / OpenShift</span>
+    <span class="skill-badge">FHIR</span>
+  </div>
+
+  <div class="section-title">Professional Experience</div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Application Architect & Java Developer — Smals</div>
+      <div class="job-meta">2020 – present | Belgium</div>
+    </div>
+    <div class="job-desc">Working in the Vitalink team on the national platform that lets healthcare providers securely share patient data.</div>
+    <ul class="job-bullets">
+      <li>Design and implement software architecture in close collaboration with solution architects.</li>
+      <li>Lead migrations to new technologies and infrastructure (e.g. OpenShift 3 → 4).</li>
+      <li>Introduced performance tracing with Zipkin across the service fleet.</li>
+      <li>Refactored multiple microservices and significant portions of the shared codebase.</li>
+      <li>Mentor and coach junior developers; conducted numerous technical interviews.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Application Engineer (Java) — Belfius Insurance</div>
+      <div class="job-meta">2016 – 2020 | Belgium</div>
+    </div>
+    <div class="job-desc">Planned, designed, built and tested new software applications end-to-end for internal and customer-facing applications.</div>
+    <ul class="job-bullets">
+      <li><strong>Sign Platform:</strong> The main application responsible for the signing process of all documents for Belfius Insurance and Bank.</li>
+      <li><strong>WebSocket framework:</strong> Server + JavaScript client library for socket-based front-end integration.</li>
+      <li><strong>eID integration:</strong> Background Belgian-eID card-reader application that pushes identity data to a message queue.</li>
+      <li><strong>QR Login:</strong> Alternative login flow. Led the project end-to-end and built the back-end.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="job-header">
+      <div class="job-title">Java Developer — QNH Belgium</div>
+      <div class="job-meta">2014 – 2016 | Belgium</div>
+    </div>
+    <div class="job-desc">Delivering Java solutions to clients across Belgium and the Netherlands.</div>
+    <ul class="job-bullets">
+      <li><strong>Hollandsnieuwe / Vodafone:</strong> Collaborated on a multi-brand customer provisioning platform. Refactored the payment process.</li>
+      <li><strong>Simcard management:</strong> Added Redis-backed HTTP session via Spring Boot, user/account management.</li>
+      <li><strong>DCC:</strong> Proof of concept of an Android app with a web-services back-end.</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Education & Certifications</div>
+  <ul class="job-bullets">
+    <li><strong>Bachelor's degree, Applied Computer Science</strong> — PXL University of Applied Sciences and Arts, Hasselt (2018)</li>
+    <li><strong>Associate's degree, Biotechnology</strong> — GroepT, Leuven (2014)</li>
+    <li><strong>Oracle Certified Associate, Java SE 8 Programmer</strong> — Oracle</li>
+    <li><strong>Professional Scrum Master I (PSM I)</strong> — Scrum.org</li>
+  </ul>
+</body>
+</html>
